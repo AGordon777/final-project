@@ -23,7 +23,7 @@ https://ghoapi.azureedge.net/api/uwgt5 - retrieved via API but not used as incom
 
 'data-cleaning-processing.ipynb' This file reformats the raw data from an extended pivot into narrower dataframes. It extracts useful features from within the column 'Element' and creates new columns for analysis.
 
-'EDA.ipynb' This file further reformats and explores the datasets, enabling conclusions to be drawn. Dataframes from here are exported as .csv for visualisation in Tableau (link below). This file could certainly do with some restructuring!
+'EDA.ipynb' This file further reformats and explores the datasets, enabling conclusions to be drawn. Dataframes from here are exported as .csv for visualisation in Tableau (link below).
 
 'model.ipynb' This file contains a Regression model pipeline and optimisations to predict GDP/capita from food statistics.
 
@@ -36,18 +36,20 @@ I reformatted both the historical and recent 'balance' datasets to find annual f
 
 I identified country-years affected by large recorded famines between 1961 and 2010 and found food balances for those datapoints.
 
-I used the more recent dataset (2010-2020) to categorise countries into producers/importers/exporters relative to their population food requirements.
+I used the more recent dataset (2010-2020) to categorise countries into producers/importers/exporters relative to their own population food requirements.
 
-I tested various Regression models to predict GDP/capita. DecisionTreeRegressor with some parameter optimisations yielded a r2-score of over 0.90.
+I tested various Regression models to predict GDP/capita. DecisionTreeRegressor with some parameter optimisations yielded a r2-score of 0.90.
 
 
 ### Conclusions drawn
 
 Few countries after 1980 have ever dropped below an annual national food balance of 1,800 kcal/capita/day even in famine years. This suggests that famines may be intra-national logistical or political constructs rather than simply due to the absolute availability of food in a country.
 
+There was enough food available globally in 2020 to feed an additional 5bn people.
+
 National stories can be seen in the food availability data. For example, rapid growth in China, Egypt and later Djibouti and catastrophic declines in Afghanistan since 1960.
 
-GDP per capita in a given year can be predicted with good accuracy using features such as kcal/capita/day, fraction of kcal derived from animals vs plants, ratio of imported kcal to available kcal, protein g/capita/day, and population.
+GDP per capita in a given year can be predicted with good accuracy using features such as kcal/capita/day, fraction of kcal derived from animals vs plants, ratio of imported kcal to available kcal, protein g/capita/day, population and so on.
 
 
 ### Further investigation
